@@ -20,9 +20,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
-    .font-worksans {
-      font-family: 'Work Sans', sans-serif;
-    }
+      .font-worksans {
+        font-family: "Work Sans", sans-serif;
+      }
     </style>
   </head>
 
@@ -30,10 +30,13 @@
     <header>
       <div class="hero min-h-screen bg-[#F9F6E2]">
         <div class="hero-content flex-col lg:flex-row-reverse">
-          <img src="./images/Summer 1.png" class="flex-1 rounded-lg lg:w-[550px] md:w-[500px] p-5" />
+          <img
+            src="./images/Summer 1.png"
+            class="flex-1 rounded-lg lg:w-[550px] md:w-[500px] p-5"
+          />
           <div class="text-center flex-1 lg:w-[650px] p-5">
             <h1 class="text-xl font-bold text-slate-800">---SALE FEVER---</h1>
-            <p class="py-6 text-[58px] font-bold ">
+            <p class="py-6 text-[58px] font-bold">
               Purchase TK 200 or above & get
               <span class="text-[#E527B2]">20% off</span>
             </p>
@@ -49,7 +52,7 @@
       </div>
     </header>
 
-    <main class="  flex lg:flex-row flex-col container mx-auto p-5 ">
+    <main class="flex lg:flex-row flex-col container mx-auto p-5">
       <section class="p-5 lg:w-[75%] w-full">
         <!-- kitchen -->
 
@@ -129,7 +132,9 @@
                   />
                 </div>
 
-                <p id="kitchen-one" class="text-xl font-semibold">K. Accessories</p>
+                <p id="kitchen-one" class="text-xl font-semibold">
+                  K. Accessories
+                </p>
 
                 <h5 class="text-xl font-normal text-gray-400">
                   <span>39.00</span> TK
@@ -530,43 +535,80 @@
       <!-- coupon -->
 
       <section class="lg:w-[25%] w-full pt-[110px] mb-5">
-
         <div class="bg-[#FFFFFF] py-5 px-6">
-
           <h1 class="text-2xl font-semibold mb-3 p-4">Have coupon?</h1>
 
-          <div class="flex mx-auto w-[90%] ">
-            <input class="px-2 border border-gray-200 w-[70%] rounded-l-lg" type="text" name="" id="" placeholder="Coupon code" />
-            <button disabled class="btn rounded-none bg-[#E527B2] text-white font-medium border-none w-[30%] rounded-r-lg">Apply</button>
-          </div>
+          <form id="coupon-form" class="flex mx-auto w-[90%]" action="">
+            <input
+              class="px-2 border border-gray-200 w-[70%] rounded-l-lg"
+              type="text"
+              name="couponInput"
+              id=""
+              placeholder="Coupon code"
+            />
+
+            <button
+              id="btn-apply"
+              disabled
+              class="btn rounded-none bg-[#E527B2] text-white font-medium border-none w-[30%] rounded-r-lg"
+            >
+              Apply
+            </button>
+          </form>
         </div>
 
         <div class="bg-[#FFFFFF] mt-8">
+          <!-- new item -->
+          <div
+            class="slected px-4 pt-6 list-decimal text-lg font-medium"
+            id="selected-item"
+          ></div>
+          <hr class="mt-4 w-[90%] mx-auto" />
 
-        <!-- new item -->
-        <div class="slected px-4 pt-6 " id="selected-item">
-        
-        
+          <div class="p-4">
+            <p class="text-xl font-medium">
+              Total price: <span id="total-price">00</span> TK
+            </p>
+
+            <p class="text-xl font-medium">
+              Discount: <span id="discount-total">00</span>TK
+            </p>
+
+            <p class="text-xl font-medium">
+              Total: <span id="final-total">00</span>TK
+            </p>
+            <hr class="pb-16 mt-4" />
+          </div>
         </div>
-        <hr class="mt-4 w-[90%] mx-auto">
-
-        
-
-        <div class="p-4">
-         <p class="text-xl font-medium">Total price: <span>00</span></p>
-
-         <p class="text-xl font-medium">Discount: <span>00</span></p>
-
-         <p class="text-xl font-medium ">Total: <span>00</span></p>
-         <hr class="pb-16 mt-4">
+        <div class="relative flex justify-center">
+          <button
+            onclick="my_modal_5.showModal()"
+            id="btn-purchase"
+            disabled
+            class="btn mx-auto w-[70%] rounded-lg bg-[#E527B2] text-white -mt-6"
+          >
+            Make Purchase
+          </button>
         </div>
-
-        </div>
-       <div class="relative flex justify-center">
-        <button disabled class="btn mx-auto w-[70%] rounded-lg bg-[#E527B2] text-white -mt-6">Make Purchase</button>
-       </div>
-
       </section>
+
+      <!-- Open the modal using ID.showModal() method -->
+      
+      <dialog id="my_modal_5" class="modal  modal-middle ">
+        <form method="dialog" class="modal-box flex flex-col items-center ">
+         
+          <img class="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32" src="./images/congo.png" alt="" srcset="">
+          <h3 class="font-bold text-3xl">Congratulations</h3>
+          <p class="py-4">Your Purchase the product</p>
+         
+          <div class="modal-action flex justify-center">
+            <!-- if there is a button in form, it will close the modal -->
+            <button id="close-btn" class="btn bg-[#E527B2] text-white rounded-lg" onclick="">Go Home</button>
+          </div>
+        </form>
+      </dialog>
+
+      
     </main>
 
     <script src="./index.js"></script>
