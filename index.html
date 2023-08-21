@@ -307,7 +307,7 @@
             <!-- 1st card div -->
             <div onclick="handleclick(this)" class="card bg-base-100 shadow-xl">
               <figure class="px-10 pt-10">
-                <div class="bg-gray-200 px-12 py-8">
+                <div class="bg-gray-200 px-12 py-9">
                   <img
                     src="./images/prod7.png"
                     alt="Shoes"
@@ -382,7 +382,7 @@
             <!-- 2nd card div -->
             <div onclick="handleclick(this)" class="card bg-base-100 shadow-xl">
               <figure class="px-10 pt-10">
-                <div class="bg-gray-200 px-12 py-12">
+                <div class="bg-gray-200 px-12 py-7">
                   <img
                     src="./images/prod8.png"
                     alt="Shoes"
@@ -535,12 +535,13 @@
       <!-- coupon -->
 
       <section class="lg:w-[25%] w-full pt-[110px] mb-5">
-        <div class="bg-[#FFFFFF] py-5 px-6">
+
+        <div class="bg-[#FFFFFF] py-5 px-6 rounded-lg">
           <h1 class="text-2xl font-semibold mb-3 p-4">Have coupon?</h1>
 
           <form id="coupon-form" class="flex mx-auto w-[90%]" action="">
             <input
-              class="px-2 border border-gray-200 w-[70%] rounded-l-lg"
+              class="px-2 border border-gray-200 w-[70%] rounded-l-lg font-medium"
               type="text"
               name="couponInput"
               id=""
@@ -550,14 +551,14 @@
             <button
               id="btn-apply"
               disabled
-              class="btn rounded-none bg-[#E527B2] text-white font-medium border-none w-[30%] rounded-r-lg"
+              class="btn rounded-none bg-[#E527B2] text-white font-medium border-none w-[30%] rounded-r-lg capitalize"
             >
               Apply
             </button>
           </form>
         </div>
 
-        <div class="bg-[#FFFFFF] mt-8">
+        <div class="bg-[#FFFFFF] mt-8 rounded-lg">
           <!-- new item -->
           <div
             class="slected px-4 pt-6 list-decimal text-lg font-medium"
@@ -585,7 +586,7 @@
             onclick="my_modal_5.showModal()"
             id="btn-purchase"
             disabled
-            class="btn mx-auto w-[70%] rounded-lg bg-[#E527B2] text-white -mt-6"
+            class="btn mx-auto w-[70%] rounded-lg bg-[#E527B2] text-white -mt-6 capitalize"
           >
             Make Purchase
           </button>
@@ -603,7 +604,7 @@
          
           <div class="modal-action flex justify-center">
             
-     <button id="close-btn" class="btn bg-[#E527B2] text-white rounded-lg" onclick="">Go Home</button>
+     <button id="close-btn" class="btn bg-[#E527B2] text-white rounded-lg capitalize" onclick="">Go Home</button>
           </div>
         </form>
       </dialog> 
